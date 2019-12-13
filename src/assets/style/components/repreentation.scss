@@ -1,0 +1,39 @@
+.preentation {
+  height: 50rem;
+  padding: 5rem 0;
+  background: #fff;
+  &__row {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    flex: 0 1 45%;
+    padding: 2rem;
+    color: $white;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    background: $brown;
+    @include respond(phone) {
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .btn1 {
+      margin-top: 4rem;
+    }
+  }
+  &__img {
+    flex: 0 1 55%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    background-image: url(https://images.unsplash.com/photo-1552407396-f5e06cbf18a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+  }
+}

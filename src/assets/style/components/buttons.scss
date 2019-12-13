@@ -1,0 +1,204 @@
+.btn1 {
+  background: transparent;
+  border: none;
+  outline: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  line-height: 2rem;
+  cursor: pointer;
+  font-family: $alata;
+  text-align: center;
+  &__shadow {
+    &--black {
+      @include shadow($main-bg);
+    }
+    &--cyan {
+      @include shadow($cyan);
+    }
+    &--primary {
+      @include shadow($primary);
+    }
+    &--white {
+      @include shadow($white);
+    }
+    &--yellow {
+      @include shadow($yellow);
+    }
+  }
+}
+.btn {
+  margin: 0.8rem;
+  font-size: 1.4rem;
+  min-width: 64px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.05857em;
+  font-family: "Nano", sans-serif;
+  background: transparent;
+  position: relative;
+  border: 1px solid;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    margin-right: 1rem;
+    display: inline-block;
+  }
+  .text {
+    display: inline-block;
+  }
+  &--outlined {
+    &-warning {
+      @include outlined($yellow, rgba(0, 0, 0, 0.7));
+    }
+    &-primary {
+      @include outlined($primary, $white);
+    }
+    &-secondary {
+      @include outlined($secondary, $white);
+    }
+    &-dark {
+      @include outlined($main-bg, $white);
+    }
+    &-danger {
+      @include outlined($danger, $white);
+    }
+    &-cyan {
+      @include outlined($cyan, $main-bg);
+    }
+    &-white {
+      @include outlined($white, $main-bg);
+    }
+  }
+  &--contained {
+    &-warning {
+      @include contained($yellow, rgba(0, 0, 0, 0.7), #b99f1c);
+    }
+    &-secondary {
+      @include contained($secondary, $white, #150963);
+    }
+
+    &-danger {
+      @include contained($danger, $white, #9a0036);
+    }
+
+    &-primary {
+      @include contained($primary, $white, #f45134);
+    }
+    &-brown {
+      @include contained($brown, $white, #403d39);
+    }
+    &-white {
+      @include contained($white, $main-bg, $cyan);
+    }
+
+    &-default {
+      @include contained($main-bg, $white, #000);
+    }
+
+    &-bluer {
+      background: rgba(0, 0, 0, 0.8);
+      color: $white;
+      @supports (backdrop-filter: blur(10px)) or
+        (-webkit-backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: grey;
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  &--wave {
+    &-primary {
+      @include wave($primary, $white);
+    }
+    &-danger {
+      @include wave($danger, $white);
+    }
+    &-white {
+      @include wave(#fff, #777);
+    }
+    &-secondary {
+      @include wave($secondary, $white);
+    }
+    &-dark {
+      @include wave($main-bg, $white);
+    }
+  }
+  &--circled {
+    &-menu {
+      min-width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      padding: 0;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.54);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      svg {
+        fill: currentColor;
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        flex-shrink: 0;
+        user-select: none;
+      }
+    }
+  }
+}
+
+[ripple] {
+  overflow: hidden;
+}
+
+.ripple__ink {
+  background: #fff;
+  border-radius: 100%;
+  height: 10em;
+  opacity: 0;
+  position: absolute;
+  width: 10em;
+}
+
+.ripple--active .ripple__ink {
+  animation: ink-ripple 0.5s ease-in-out 0s 1;
+}
+
+@keyframes ink-ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.circle {
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+  }
+  &::after {
+    border-radius: 10rem;
+  }
+}

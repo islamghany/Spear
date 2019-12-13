@@ -1,0 +1,67 @@
+.benefits {
+  padding: 3rem;
+  background: $brown;
+  @include respond(phone) {
+    padding: 3rem 0.5rem;
+  }
+  .card__overflow {
+    padding: 4rem 2.5rem 2rem;
+    background: $white;
+    flex: 0 1 calc(100% / 4 - 2rem);
+    position: relative;
+    transition: all 0.3s;
+    margin: 0 1rem;
+    margin-top: 4rem;
+
+    @include respond(tab-land) {
+      flex: 0 1 calc(100% / 2 - 2rem) !important;
+    }
+    @include respond(phone) {
+      flex: 0 1 calc(100% - 2rem) !important;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(30, 46, 58, 0.1);
+    }
+    &--out {
+      position: absolute;
+      top: -4rem;
+      i {
+        font-size: 5rem;
+        color: $primary;
+      }
+    }
+    &--heading {
+      font-size: 1.7rem;
+      font-family: "Mukta", sans-serif;
+      margin-bottom: 1rem;
+      background: $primary;
+      color: #fff;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    &--content {
+      font-size: 1.3rem;
+      color: $main;
+    }
+    box-shadow: 0 6px 12px rgba(30, 46, 58, 0.06);
+    border-radius: 30px/10px;
+    button {
+      color: #4488ff;
+      text-decoration: underline;
+      span {
+        text-decoration: none;
+        svg {
+          width: 1.2rem;
+          fill: #4488ff;
+        }
+      }
+    }
+  }
+}

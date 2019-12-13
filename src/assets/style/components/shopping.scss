@@ -1,0 +1,143 @@
+.shopping {
+  position: relative;
+  padding: 7rem 0;
+  min-height: 100vh;
+  .option {
+    position: fixed;
+    top: 7rem;
+    left: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background: $white;
+    z-index: 10;
+    @include flex();
+    color: $main-bg;
+    font-size: 2rem;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    cursor: pointer;
+    i {
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    &:hover {
+      color: $primary;
+      background: #fff;
+    }
+  }
+  &__adjustment {
+    width: 30rem;
+    height: calc(100vh - 6rem);
+    top: 6rem;
+    left: 0;
+    background: #151f20;
+    color: $brown;
+    position: fixed;
+    z-index: 15;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transform: translateX(-100%);
+    padding: 2rem;
+    @include respond(phone) {
+      width: 75vw;
+      height: 100vh;
+      padding-top: 6rem;
+      top: 0;
+    }
+    .css-yk16xz-control {
+      background: transparent;
+      box-shadow: none;
+      border-color: $brown;
+    }
+    .css-1pahdxg-control {
+    }
+    .css-1pahdxg-control:hover {
+      border-color: $brown;
+    }
+    h1 {
+      margin-bottom: 0.5rem !important ;
+      font-family: "Nano";
+      font-size: 1.5rem;
+      color: #eadedb;
+    }
+    .form {
+      &__unit {
+        &.range {
+          .mainHeading {
+            margin-bottom: 2rem !important;
+          }
+          .subHeaing {
+            margin-top: 4rem !important;
+          }
+          div {
+            position: absolute;
+            z-index: 0;
+            cursor: grab;
+            user-select: none;
+            touch-action: none;
+            height: 30px;
+            width: 30px;
+            border-radius: 21px;
+            background-color: #de533a !important;
+            transform: translate(290px, -13px);
+          }
+        }
+        &.color {
+          input {
+            display: none;
+            &:checked + label {
+              transform: scale(1.5);
+              box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+                0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+            }
+          }
+          label {
+            margin: 0 0.4rem;
+            width: 1.4rem;
+            height: 1.4rem;
+            background: #b27676;
+            display: inline-block;
+            border-radius: 0.7rem;
+            cursor: pointer;
+            transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+              border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            &[for="red"] {
+              background: #c72c41;
+            }
+            &[for="orange"] {
+              background: #fe6845;
+            }
+            &[for="white"] {
+              background: #fff;
+            }
+            &[for="green"] {
+              background: #29a19c;
+            }
+            &[for="black"] {
+              background: #1a1a1a;
+            }
+            &[for="grey"] {
+              background: grey;
+            }
+            &[for="blue"] {
+              background: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__clothes {
+    width: 85%;
+    margin: 0 auto;
+  }
+}

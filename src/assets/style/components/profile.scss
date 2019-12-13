@@ -1,0 +1,180 @@
+.redux-toastr .toastr.rrt-success {
+  background-color: #f5593d !important;
+  font-family: "Nano";
+}
+.redux-toastr .toastr.rrt-success .rrt-progressbar {
+  background-color: #fff !important;
+}
+
+.redux-toastr .toastr.rrt-success {
+  font-size: 1.6rem;
+  font-family: "Nano" !important;
+  background-color: $primary !important;
+}
+.redux-toastr .top-left {
+  width: 70vw !important;
+  @include respond(phone) {
+    top: 6rem;
+    width: 90vw !important;
+  }
+}
+.profile {
+  margin: 6rem auto;
+  width: 80%;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    .btn {
+      font-size: 1.2rem !important;
+      margin: 0 !important;
+    }
+    .mainHeading {
+      margin-bottom: 0;
+    }
+  }
+  .slick-dots {
+    bottom: -2.5rem;
+    li {
+      button {
+        border-radius: 10px;
+        border: 1px solid transparent;
+      }
+      button::before {
+        color: $primary;
+      }
+    }
+    .slick-active {
+      button {
+        border: 1px solid $primary;
+      }
+    }
+  }
+  &__info {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    margin-bottom: 2rem;
+    .subHeading {
+      color: $main;
+    }
+    &--item {
+      font-size: 1.5rem;
+      color: $brown;
+      padding: 0.6rem 0;
+      span {
+        font-weight: 300;
+        font-family: "Nano";
+        padding-left: 1rem;
+      }
+    }
+    @include respond(phone) {
+      padding: 1rem;
+      border-radius: 0;
+    }
+  }
+  @include respond(not-phone) {
+    .slick-dots {
+      bottom: -5rem;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+      font-family: "slick";
+      font-size: 40px;
+      line-height: 2;
+      opacity: 0.75;
+      color: #f5593d;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .slick-next {
+      right: -50px;
+    }
+    .slick-prev {
+      left: -50px;
+    }
+    .slick-prev,
+    .slick-next {
+      font-size: 0;
+      line-height: 0;
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      transform: translate(0, -50%);
+      cursor: pointer;
+      color: transparent;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    .slick-dots {
+      li {
+        height: 40px;
+        width: 40px;
+        button {
+          height: 40px;
+          width: 40px;
+          border-radius: 20px;
+          border: 2px solid transparent;
+        }
+        button::before {
+          color: $primary;
+          font-family: "slick";
+          font-size: 10px;
+          line-height: 40px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .slick-active {
+        button {
+          border: 2px solid $primary;
+        }
+      }
+    }
+  }
+  &__wishlist {
+    margin-top: 7rem;
+  }
+  @include respond(phone) {
+    &__wishlist,
+    &__cart {
+      margin-left: 2.2rem;
+      margin-right: 2.2rem;
+    }
+  }
+  &__cart,
+  &__wishlist {
+    .cart {
+      margin-left: 1rem;
+      &__img {
+        width: 100%;
+        height: 20rem;
+        background-size: cover;
+        background-position: center center;
+      }
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        background: #f7f7f7;
+        color: $main-bg;
+        padding: 1rem;
+      }
+      &__name {
+        font-family: $alata;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

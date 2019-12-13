@@ -1,0 +1,172 @@
+.card {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  box-shadow: 0 3px 5px rgba(83, 81, 77, 0.2) !important;
+  margin: 1rem 0.5rem;
+  flex: 0 1 calc(100% / 5 - 1rem);
+  @include respond(1100px) {
+    flex: 0 1 calc(100% / 3 - 1rem);
+  }
+  @include respond(tab-port) {
+    flex: 0 1 calc(100% / 2 - 1rem);
+  }
+  @include respond(phone) {
+    flex: 0 1 calc(100% - 1rem);
+    .card__icons {
+      font-size: 3rem;
+    }
+  }
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+  }
+  &__img {
+    overflow: hidden;
+    height: 28rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f7;
+    color: $main-bg;
+    padding: 1rem;
+  }
+  &__name {
+    font-family: $alata;
+    font-size: 1.4rem;
+  }
+  &__price {
+    font-size: 1.2rem;
+    color: #333;
+    .sale {
+      color: #ff3451;
+      text-decoration: line-through;
+      margin-right: 1rem;
+    }
+  }
+  &__icons {
+    font-size: 2.3rem;
+    display: flex;
+
+    :not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    i {
+      transition: all 0.3s;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.card2 {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin: 1rem 0.5rem;
+  flex: 0 1 calc(100% / 3 - 1rem);
+  @include respond(1100px) {
+    flex: 0 1 calc(100% / 3 - 1rem);
+  }
+  @include respond(tab-port) {
+    flex: 0 1 calc(100% / 2 - 1rem);
+  }
+  @include respond(phone) {
+    flex: 0 1 calc(100% - 1rem);
+    .card__icons {
+      font-size: 3rem;
+    }
+  }
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+  }
+  &__img {
+    overflow: hidden;
+    height: 28rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f7;
+    color: $main-bg;
+    padding: 1rem;
+  }
+  &__name {
+    font-family: $alata;
+    font-size: 1.4rem;
+  }
+  &__price {
+    font-size: 1.2rem;
+    color: #333;
+    .sale {
+      color: #ff3451;
+      text-decoration: line-through;
+      margin-right: 1rem;
+    }
+  }
+  &__icons {
+    font-size: 2.3rem;
+    display: flex;
+
+    :not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    i {
+      transition: all 0.3s;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.mini {
+  height: 10.3rem;
+  display: flex;
+  width: 100%;
+  padding: 1.2rem 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid transprent;
+  &__img {
+    flex: 0 1 40%;
+    background-size: cover;
+    background-position: center;
+  }
+  &:hover {
+    border-color: rgba(20, 23, 28, 0.05);
+    background: rgb(247, 247, 247);
+  }
+
+  &__contnet {
+    margin-left: 0.5rem;
+    flex: 1;
+    color: $brown;
+    font-family: "Nano";
+    text-align: left;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+}

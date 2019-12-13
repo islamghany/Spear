@@ -1,0 +1,75 @@
+.product {
+  width: 90%;
+  margin: 8rem auto;
+  padding: 2rem 0;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+  &__img {
+    width: 60%;
+    float: left;
+    padding: 0 5rem;
+    color: #000;
+    margin-bottom: 10rem;
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+      margin: 2rem auto 8rem;
+      padding: 0;
+    }
+    //overflow: hidden;
+    .slick-slider {
+      @include respond(phone) {
+        margin: 0 2.3rem;
+      }
+      height: 100%;
+      .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: -36px 5px;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  &__info {
+    width: 40%;
+    background: #f7f7f7;
+    padding: 2rem;
+    float: right;
+    color: #1a1a1a;
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+      margin: 4rem auto 0;
+      .subHeading {
+        font-size: 1.4rem !important;
+      }
+      .second {
+        font-size: 1.2rem !important;
+      }
+      .p {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    .subHeading {
+      font-size: 1.8rem;
+      font-family: $alata;
+      margin-bottom: 1.5rem;
+      .sale {
+        color: $danger;
+        text-decoration: line-through;
+        margin-right: 0.5rem;
+      }
+      .second {
+        color: #696969;
+        font-size: 1.4rem;
+        font-family: $open;
+      }
+    }
+  }
+}

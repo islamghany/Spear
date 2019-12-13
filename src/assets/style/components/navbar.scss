@@ -1,0 +1,513 @@
+.mainheader {
+  display: block;
+  @include respond(781px) {
+    display: none;
+  }
+}
+.subheader {
+  display: none;
+
+  @include respond(781px) {
+    display: block;
+  }
+}
+
+.navigation {
+  height: 6rem;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  &__heading {
+    h1 {
+      font-family: "Elianto";
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-right: 3rem;
+      color: #d1d1d9;
+      font-weight: 600;
+      opacity: 0.9;
+      color: #f5593d;
+      font-size: 4rem;
+      transition: all 0.2s;
+      position: fixed;
+      top: 1rem;
+      left: 2rem;
+      z-index: 20000000;
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    background: #fff;
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    top: 1.7rem;
+    right: 5rem;
+    z-index: 2000;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $primary;
+    box-shadow: 0 3px 5px rgba(83, 81, 77, 0.2) !important;
+    @include respond(phone) {
+      top: 0.5rem;
+      right: 2rem;
+    }
+    &:hover {
+      background: #f45134;
+    }
+  }
+  &__background {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    border-radius: 50%;
+    top: 2rem;
+    right: 5.3rem;
+    @include respond(phone) {
+      top: 0.9rem;
+      right: 2.4rem;
+    }
+    //   background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background: linear-gradient(
+        219deg,
+        rgba(246, 246, 246, 0.02) 0,
+        rgba(246, 246, 246, 0.02) 20%,
+        rgba(225, 225, 225, 0.02) 20%,
+        rgba(225, 225, 225, 0.02) 40%,
+        rgba(136, 136, 136, 0.02) 40%,
+        rgba(136, 136, 136, 0.02) 60%,
+        rgba(216, 216, 216, 0.02) 60%,
+        rgba(216, 216, 216, 0.02) 80%,
+        rgba(35, 35, 35, 0.02) 80%,
+        rgba(35, 35, 35, 0.02) 100%
+      ),
+      linear-gradient(
+        299deg,
+        rgba(213, 213, 213, 0.02) 0,
+        rgba(213, 213, 213, 0.02) 20%,
+        rgba(150, 150, 150, 0.02) 20%,
+        rgba(150, 150, 150, 0.02) 40%,
+        rgba(161, 161, 161, 0.02) 40%,
+        rgba(161, 161, 161, 0.02) 60%,
+        rgba(186, 186, 186, 0.02) 60%,
+        rgba(186, 186, 186, 0.02) 80%,
+        rgba(28, 28, 28, 0.02) 80%,
+        rgba(28, 28, 28, 0.02) 100%
+      ),
+      linear-gradient(
+        50deg,
+        rgba(157, 157, 157, 0.02) 0,
+        rgba(157, 157, 157, 0.02) 16.667%,
+        rgba(147, 147, 147, 0.02) 16.667%,
+        rgba(147, 147, 147, 0.02) 33.334%,
+        rgba(42, 42, 42, 0.02) 33.334%,
+        rgba(42, 42, 42, 0.02) 50.001%,
+        rgba(214, 214, 214, 0.02) 50.001%,
+        rgba(214, 214, 214, 0.02) 66.668%,
+        rgba(34, 34, 34, 0.02) 66.668%,
+        rgba(34, 34, 34, 0.02) 83.335%,
+        rgba(211, 211, 211, 0.02) 83.335%,
+        rgba(211, 211, 211, 0.02) 100.002%
+      ),
+      linear-gradient(
+        278deg,
+        rgba(79, 79, 79, 0.03) 0,
+        rgba(79, 79, 79, 0.03) 20%,
+        rgba(217, 217, 217, 0.03) 20%,
+        rgba(217, 217, 217, 0.03) 40%,
+        rgba(5, 5, 5, 0.03) 40%,
+        rgba(5, 5, 5, 0.03) 60%,
+        rgba(200, 200, 200, 0.03) 60%,
+        rgba(200, 200, 200, 0.03) 80%,
+        rgba(125, 125, 125, 0.03) 80%,
+        rgba(125, 125, 125, 0.03) 100%
+      ),
+      linear-gradient(
+        274deg,
+        rgba(235, 235, 235, 0.03) 0,
+        rgba(235, 235, 235, 0.03) 12.5%,
+        rgba(100, 100, 100, 0.03) 12.5%,
+        rgba(100, 100, 100, 0.03) 25%,
+        rgba(44, 44, 44, 0.03) 25%,
+        rgba(44, 44, 44, 0.03) 37.5%,
+        rgba(228, 228, 228, 0.03) 37.5%,
+        rgba(228, 228, 228, 0.03) 50%,
+        rgba(36, 36, 36, 0.03) 50%,
+        rgba(36, 36, 36, 0.03) 62.5%,
+        rgba(72, 72, 72, 0.03) 62.5%,
+        rgba(72, 72, 72, 0.03) 75%,
+        rgba(30, 30, 30, 0.03) 75%,
+        rgba(30, 30, 30, 0.03) 87.5%,
+        rgba(109, 109, 109, 0.03) 87.5%,
+        rgba(109, 109, 109, 0.03) 100%
+      ),
+      linear-gradient(90deg, #403d39, #151f20);
+
+    z-index: 1000;
+    // transform: scale(50);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s;
+  }
+  &__list {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style-type: none;
+    @include respond(phone) {
+      margin-top: 4rem;
+    }
+  }
+  &__item {
+    margin-bottom: 1rem;
+    a,
+    button {
+      font-family: "Nano";
+      width: 20rem;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem 3rem;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      transition: all 0.4s;
+      display: inline-block;
+      background: transparent;
+      border: 1px solid $primary;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      @include respond(phone) {
+        font-size: 1.4rem;
+        padding: 0.5rem 1.2rem;
+        width: 15rem;
+      }
+      &:hover {
+        color: #fff;
+      }
+      span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: $primary;
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+      }
+    }
+    &:hover span {
+      transform: translateY(0) scale(2);
+    }
+    span:nth-child(1) {
+      --n: 1;
+    }
+    span:nth-child(2) {
+      --n: 2;
+    }
+    span:nth-child(3) {
+      --n: 3;
+    }
+    span:nth-child(4) {
+      --n: 4;
+    }
+
+    &:hover,
+    &:active {
+      //background-position: 100%;
+      color: #1a1a1a;
+      //transform: translateX(1rem)
+      //color: #000;
+    }
+  }
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+  &__icon {
+    position: relative;
+    margin-top: 2.3rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 2px;
+      background: #fff;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+    &::before {
+      top: -0.8rem;
+    }
+  }
+  // &__button:hover &__icon::before {
+  //     top:-1rem;
+  // }
+  // &__button:hover &__icon::after {
+  //     top:1rem;
+  // }
+  &__checkbox:checked + &__button &__icon {
+    background: transparent;
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav {
+  @include flex(space-between, center);
+  width: 100%;
+  padding: 0 2rem;
+  height: 6rem;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 222;
+  //box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+
+  &__logo {
+    a {
+      font-family: "Elianto";
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-right: 3rem;
+      color: #d1d1d9;
+      font-weight: 600;
+      opacity: 0.9;
+      color: #f5593d;
+      transition: all 0.2s;
+    }
+  }
+  &__navigations {
+    display: flex;
+    align-items: center;
+    a:hover {
+      background-color: transparent;
+      opacity: 1;
+      color: #fe4d2d;
+    }
+  }
+  &__list {
+    display: flex;
+    :not(:last-child) {
+      margin-right: 0.2rem;
+    }
+  }
+  &__item {
+    a {
+      transition: all 0.2s;
+      padding: 1.2rem 3rem;
+      font-size: 1.4rem;
+      font-family: "Nano";
+      letter-spacing: 1px;
+      color: #f5593d;
+      opacity: 0.9;
+      font-weight: 600;
+      border-radius: 2rem;
+
+      &.active {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+  &__dropdown {
+    background: $white;
+    cursor: default;
+    position: absolute;
+    top: 100%;
+    right: -1rem;
+    width: 33rem;
+    display: none;
+    box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+    color: $main-bg !important;
+    height: auto;
+    z-index: 30;
+    &.form {
+      background: #fff;
+      .p {
+        color: $main;
+        margin-top: 0.7rem;
+        a {
+          color: #2ba9cd;
+          &:hover {
+            color: $info;
+          }
+        }
+      }
+    }
+    &--content {
+      max-height: 35rem;
+      overflow-y: scroll;
+    }
+    .user {
+      &__info {
+        span {
+          display: inline-block;
+          font-size: 1.5rem;
+          width: 100%;
+          padding: 1.2rem 2rem;
+          font-family: "Nano";
+          margin: 0.5rem 0;
+          cursor: pointer;
+          &:hover {
+            background: $main;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .dropdown__end {
+      height: 10rem;
+      padding: 1.2rem 2rem;
+      @include flex();
+      flex-direction: column;
+      background: #f7f7f7;
+      .p {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+        text-align: left;
+      }
+    }
+
+    &--item {
+      width: 100%;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    &::after {
+      content: "";
+      border-color: transparent transparent $white transparent;
+      top: -1rem;
+      left: auto;
+      right: 2.5rem;
+      border-style: solid;
+      border-width: 0 10px 13px;
+      content: "" !important;
+      height: 0;
+      width: 0;
+      position: absolute;
+    }
+  }
+  &__board {
+    &--list {
+      display: flex;
+      color: $primary;
+
+      > li {
+        .count {
+          width: 2rem;
+          height: 2rem;
+          position: absolute;
+          top: -0.3rem;
+          border-radius: 1rem;
+          right: 0;
+          background: #f5593d;
+          color: #fff;
+          @include flex();
+        }
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 3rem;
+        svg {
+          fill: $primary;
+        }
+
+        &:hover {
+          background: rgba(20, 23, 28, 0.05);
+          & > .nav__dropdown {
+            display: block;
+          }
+        }
+        svg {
+          height: 2.5rem;
+
+          width: 2.5rem;
+          //border-radius: 50%;
+          // font-size:2.4rem;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  background: $white !important;
+  position: fixed !important;
+  transition: all 0.4s ease-in-out;
+  animation: slide-down 0.5s;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+
+  a {
+    color: $brown !important;
+    &:hover {
+      color: #1a1a1a;
+    }
+  }
+  svg {
+    fill: $brown !important;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-20rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
